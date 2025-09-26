@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+    <h1>Créer une entreprise et votre compte dirigeant</h1>
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.firstName) }}
+        {{ form_row(registrationForm.lastName) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword.first) }}
+        {{ form_row(registrationForm.plainPassword.second) }}
+        {{ form_row(registrationForm.companyName) }}
+        {{ form_row(registrationForm.companySiret) }}
+
+        <button class="btn">S'inscrire</button>
+    {{ form_end(registrationForm) }}
+{% endblock %}
